@@ -2,7 +2,7 @@
 // You can write your code in this editor
 
 if ismoving = true {
-	speed = 1
+	speed = 16
 } else {
 	speed = 0;
 }
