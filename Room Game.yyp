@@ -44,7 +44,7 @@
     {"id":{"name":"obj_hole","path":"objects/obj_hole/obj_hole.yy",},},
     {"id":{"name":"obj_square","path":"objects/obj_square/obj_square.yy",},},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},},
-    {"id":{"name":"obj_wall_parent","path":"objects/obj_wall_parent/obj_wall_parent.yy",},},
+    {"id":{"name":"obj_wall","path":"objects/obj_wall/obj_wall.yy",},},
     {"id":{"name":"spr_empty","path":"sprites/spr_empty/spr_empty.yy",},},
     {"id":{"name":"spr_obstacle","path":"sprites/spr_obstacle/spr_obstacle.yy",},},
     {"id":{"name":"BaseRoom","path":"rooms/BaseRoom/BaseRoom.yy",},},
