@@ -81,6 +81,7 @@
     {"name":"inst_1AF9DB65","path":"rooms/Level1/Level1.yy",},
     {"name":"inst_463A7806","path":"rooms/Level1/Level1.yy",},
     {"name":"inst_5FDB1DC6","path":"rooms/Level1/Level1.yy",},
+    {"name":"inst_4CBC0503","path":"rooms/Level1/Level1.yy",},
   ],
   "isDnd": false,
   "layers": [
@@ -159,6 +160,7 @@
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_1AF9DB65","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_obstacle","path":"objects/obj_obstacle/obj_obstacle.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":64.0,"y":48.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_463A7806","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_obstacle","path":"objects/obj_obstacle/obj_obstacle.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":80.0,"y":48.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_5FDB1DC6","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":96.0,"y":48.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_4CBC0503","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_wall_parent","path":"objects/obj_wall_parent/obj_wall_parent.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":144.0,"y":128.0,},
       ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
     {"resourceType":"GMRBackgroundLayer","resourceVersion":"1.0","name":"Background","animationFPS":0.0,"animationSpeedType":0,"colour":4294967295,"depth":100,"effectEnabled":true,"effectType":null,"gridX":16,"gridY":16,"hierarchyFrozen":true,"hspeed":0.0,"htiled":true,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"properties":[],"spriteId":{"name":"spr_tileset","path":"sprites/spr_tileset/spr_tileset.yy",},"stretch":false,"userdefinedAnimFPS":true,"userdefinedDepth":false,"visible":true,"vspeed":0.0,"vtiled":true,"x":0,"y":0,},
   ],

@@ -31,7 +31,7 @@
   "isEcma": false,
   "LibraryEmitters": [],
   "MetaData": {
-    "IDEVersion": "2023.8.0.98",
+    "IDEVersion": "2023.8.1.102",
   },
   "resources": [
     {"id":{"name":"obj_game","path":"objects/obj_game/obj_game.yy",},},
@@ -39,6 +39,7 @@
     {"id":{"name":"spr_player","path":"sprites/spr_player/spr_player.yy",},},
     {"id":{"name":"spr_ball","path":"sprites/spr_ball/spr_ball.yy",},},
     {"id":{"name":"spr_tileset","path":"sprites/spr_tileset/spr_tileset.yy",},},
+    {"id":{"name":"obj_wall_parent","path":"objects/obj_wall_parent/obj_wall_parent.yy",},},
     {"id":{"name":"Level2","path":"rooms/Level2/Level2.yy",},},
     {"id":{"name":"spr_hole","path":"sprites/spr_hole/spr_hole.yy",},},
     {"id":{"name":"obj_hole","path":"objects/obj_hole/obj_hole.yy",},},
@@ -46,16 +47,17 @@
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},},
     {"id":{"name":"obj_wall","path":"objects/obj_wall/obj_wall.yy",},},
     {"id":{"name":"spr_empty","path":"sprites/spr_empty/spr_empty.yy",},},
+    {"id":{"name":"obj_pole","path":"objects/obj_pole/obj_pole.yy",},},
     {"id":{"name":"spr_obstacle","path":"sprites/spr_obstacle/spr_obstacle.yy",},},
     {"id":{"name":"BaseRoom","path":"rooms/BaseRoom/BaseRoom.yy",},},
     {"id":{"name":"Level1","path":"rooms/Level1/Level1.yy",},},
   ],
   "RoomOrderNodes": [
+    {"roomId":{"name":"BaseRoom","path":"rooms/BaseRoom/BaseRoom.yy",},},
     {"roomId":{"name":"Level1","path":"rooms/Level1/Level1.yy",},},
     {"roomId":{"name":"Level2","path":"rooms/Level2/Level2.yy",},},
-    {"roomId":{"name":"BaseRoom","path":"rooms/BaseRoom/BaseRoom.yy",},},
   ],
-  "templateType": "game",
+  "templateType": null,
   "TextureGroups": [
     {"resourceType":"GMTextureGroup","resourceVersion":"1.3","name":"Default","autocrop":true,"border":2,"compressFormat":"bz2","directory":"","groupParent":null,"isScaled":true,"loadType":"default","mipsToGenerate":0,"targets":-1,},
   ],
