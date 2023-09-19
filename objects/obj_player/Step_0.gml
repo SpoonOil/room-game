@@ -2,7 +2,6 @@
 // You can write your code in this editor
 
 if (global.move_mode = "player") {
-	
 	if (keyboard_check_pressed(vk_right)) {
 		direction = 0;
 		speed = collision_check(self, direction);
