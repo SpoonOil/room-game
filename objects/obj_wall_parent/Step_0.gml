@@ -44,29 +44,51 @@ if (global.move_mode = "room") {
 			// Check whether the given wall is able to move in the desired direction...
 			var _j = 1;
 			while true {
-				var _space = instance_place(_wall.x + check_vector_x*_j, _wall.y + check_vector_y*_j, [obj_player, obj_pole, obj_square]);
 				
-				if (_space == noone || (object_get_name(_space.object_index) == "obj_player" && _j > 1) || object_get_name(_space.object_index) == "obj_wall" ) {
-					// Either there is an immediate empty space OR a player at the end of a line of boxes OR a wall tile
-					// YES, this wall tile can move, so we can move on to checking the next wall instance
-					break;	
-				}
-				else {
-					// If we got here when _j = 1 , that means the adjacent space was NOT empty
-					// If we got here when _j > 1 , that means the adjacent space was NOT empty AND was occupied by something other than the player
-					var _obj_name = object_get_name(_space.object_index);
-					if ( (_obj_name == "obj_player" && _j == 1) || _obj_name == "obj_pole") {
-						// If the adjacent object is a player on the first check or a pole, we CANNOT move
-						can_move = false;
-						break
+				// Retrieve information on what we would collide with...
+				ds_list_clear(collisions_list);
+				var _num_cols = instance_place_list(_wall.x + check_vector_x*_j, _wall.y + check_vector_y*_j, [obj_player, obj_pole, obj_box], collisions_list, true);
+				
+				
+				// How many objects of interest did we collide with?
+				if _num_cols > 1 {
+					// In this case, we've collided with two objects
+					// One of the objects we've collided with is a submerged box. What's the other object?
+					if (object_get_name(collisions_list[| 0].object_index) == "obj_box" && collisions_list[| 0].walkable) {
+						var _space = collisions_list[| 1];
 					}
 					else {
-						// In this case, the object in question MUST be a box
-						// We must check the next object in line
-						// While we're doing these checks, I also want to mark ahead of time what boxes need to get moved...
-						boxes_to_move[array_length(boxes_to_move)] = _space
-						_j++;
+						var _space = collisions_list[| 0];	
 					}
+				}
+				else if _num_cols == 1 {
+					// In this case, we collided with ONE object
+					var _space = collisions_list[| 0];
+				}
+				else {
+					// In this case, we didn't collide with anything of interest! We can break and check the next object
+					break;	
+				}
+				
+				// If we got here when _j = 1 , that means the adjacent space was NOT empty
+				// If we got here when _j > 1 , that means the adjacent space was NOT empty AND was occupied by something other than the player
+				var _obj_name = object_get_name(_space.object_index);
+				if ( (_obj_name == "obj_player" && _j == 1) || _obj_name == "obj_pole") {
+					// If the adjacent object is a player on the first check or a pole, we CANNOT move
+					can_move = false;
+					break;
+				}
+				else if ((object_get_name(_space.object_index) == "obj_player" && _j > 1) || (object_get_name(_space.object_index) == "obj_box" && _space.walkable)) {
+					// If the adjacent object is a player on the 2nd+ check, we can move!
+					// If the adjacent object is a submerged box, we can move!
+					break;
+				}
+				else {
+					// In this case, the object in question MUST be a box that is NOT submerged
+					// We must check the next object in line
+					// While we're doing these checks, I also want to mark ahead of time what boxes need to get moved...
+					boxes_to_move[array_length(boxes_to_move)] = _space
+					_j++;
 				}
 			}
 	
