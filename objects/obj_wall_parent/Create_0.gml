@@ -8,6 +8,10 @@ target_direction = 0;
 check_vector_x = 0;
 check_vector_y = 0;
 
+collisions_list = ds_list_create();
+
+depth = -16000;
+
 
 
 
