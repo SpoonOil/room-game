@@ -1,10 +1,30 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-// There are THREE movement modes within the game to be concerned about:
-// 1. PLAYER mode - the arrow keys move the player
-// 2. ROOM mode - the arrow keys move the walls in the room
-// 3. FREECAM mode - the arrow keys move the camera, allowing the player to 
+// Are there any textboxes on screen?
+if instance_number(obj_textbox_parent) > 0 {
+	global.move_mode = "text";	
+} else if global.move_mode = "text"{
+	global.move_mode = "room";
+}
+
+if keyboard_check_pressed(ord("Z")) {
+	
+	// Destroy any lingering "status" textboxes to avoid nasty overlap of any sort
+	for(i = 0; i < instance_number(obj_textbox_quick); i++) {
+		instance_destroy(instance_find(obj_textbox_quick, i));
+	}
+	
+	if (global.move_mode == "room") {
+		global.move_mode = "player";
+		text[0] = "moving player";
+		scr_create_text_quick(text);
+	} else {
+		global.move_mode = "room";
+		text[0] = "moving room";
+		scr_create_text_quick(text);
+	}
+}
 
 
 

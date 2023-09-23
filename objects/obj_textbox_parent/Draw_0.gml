@@ -60,5 +60,6 @@ txtbox_spr_h = sprite_get_height(txtbox_spr);
 draw_sprite_ext(txtbox_spr, txtbox_img, textbox_x + text_x_offset[page], textbox_y + text_y_offset[page], textbox_width/txtbox_spr_w, textbox_height/txtbox_spr_h, 0, c_white, 255);
 
 // Draw the text on the textbox
-var _drawtext = string_copy(text[page], 1, draw_char)
+var _drawtext = string_copy(text[page], 1, draw_char);
+draw_set_color(make_color_rgb(248,255,218));
 draw_text_ext(textbox_x + text_x_offset[page] + 5, textbox_y + text_y_offset[page] + 5.5, _drawtext, line_sep, line_width);

@@ -40,16 +40,8 @@ function collision_check(_xpos, _ypos, _direction, _move_speed){
 		}
 	}
 	// No, the player will not collide with a box
-	// Will they collide with a hole?
-	else if place_meeting(_xpos + x_vec, _ypos + y_vec, obj_hole) {
-		// Yes. Allow movement provided that the the hole is open
-		_hole = instance_place(_xpos + x_vec, _ypos + y_vec, obj_hole);
-		if _hole.image_index == 0 {
-			speed_val = _move_speed;
-		}
-	}
 	// Will they collide with anything known to be unconditionally "safe" to collide with?
-	else if place_meeting(_xpos + x_vec, _ypos + y_vec, obj_plate) {
+	else if place_meeting(_xpos + x_vec, _ypos + y_vec, [obj_plate, obj_key, obj_hole]) {
 		speed_val = _move_speed;
 	}
 	ds_list_clear(cols);

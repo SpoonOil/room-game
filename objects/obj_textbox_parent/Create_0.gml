@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-depth = 0;
+depth = -16000;
 
 textbox_width = 160;
 textbox_height = 32;

@@ -9,8 +9,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "grp_text",
+    "path": "folders/Objects/grp_text.yy",
   },
   "parentObjectId": null,
   "persistent": false,
