@@ -1,7 +1,11 @@
 /// @description Initialize global variables
 
-// Sets the movement to use during puzzle rooms. By default we initialize to "room" mode
-global.move_mode = "room";
+// Sets the movement to use during puzzle rooms. 
+// There are THREE modes of movement:
+// room - the arrow keys move the room
+// player - the arrow keys move the player
+// text - the arrow keys move neither (for when text boxes are on screen)
+global.move_mode = "text";
 
 // Sets the font to use for text display
 global.font_main = fnt_gameboy;
