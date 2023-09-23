@@ -47,7 +47,7 @@ if (global.move_mode = "room") {
 				
 				// Retrieve information on what we would collide with...
 				ds_list_clear(collisions_list);
-				var _num_cols = instance_place_list(_wall.x + check_vector_x*_j, _wall.y + check_vector_y*_j, [obj_player, obj_pole, obj_box], collisions_list, true);
+				var _num_cols = instance_place_list(_wall.x + check_vector_x*_j, _wall.y + check_vector_y*_j, [obj_player, obj_pole, obj_box, obj_obstacle], collisions_list, true);
 				
 				
 				// How many objects of interest did we collide with?
@@ -73,8 +73,8 @@ if (global.move_mode = "room") {
 				// If we got here when _j = 1 , that means the adjacent space was NOT empty
 				// If we got here when _j > 1 , that means the adjacent space was NOT empty AND was occupied by something other than the player
 				var _obj_name = object_get_name(_space.object_index);
-				if ( (_obj_name == "obj_player" && _j == 1) || _obj_name == "obj_pole") {
-					// If the adjacent object is a player on the first check or a pole, we CANNOT move
+				if ( (_obj_name == "obj_player" && _j == 1) || _obj_name == "obj_pole" || (_obj_name == "obj_obstacle" && _j > 1)) {
+					// If the adjacent object is a player on the first check, an obstacle on the second or more check or a pole or an obstacle, we CANNOT move
 					can_move = false;
 					break;
 				}
@@ -84,11 +84,15 @@ if (global.move_mode = "room") {
 					break;
 				}
 				else {
-					// In this case, the object in question MUST be a box that is NOT submerged
-					// We must check the next object in line
-					// While we're doing these checks, I also want to mark ahead of time what boxes need to get moved...
-					boxes_to_move[array_length(boxes_to_move)] = _space
-					_j++;
+					if _obj_name == "obj_obstacle" && _j == 1 {
+						break ;	
+					} else {
+						// In this case, the object in question MUST be a box that is NOT submerged
+						// We must check the next object in line
+						// While we're doing these checks, I also want to mark ahead of time what boxes need to get moved...
+						boxes_to_move[array_length(boxes_to_move)] = _space
+						_j++;
+					}
 				}
 			}
 	
@@ -112,10 +116,19 @@ if (global.move_mode = "room") {
 				boxes_to_move[i].speed = 16
 				boxes_to_move[i].direction = target_direction;
 			}
-		}
-		else
-		{
-			var _fake = 0;	
+			
+			// Finally, play a sound indicating that we moved the walls
+			var _sound_params =
+			{
+			    sound: snd_move_wall,
+			    priority: 100,
+			    gain: 1.0
+			};
+			
+			if audio_is_playing(snd_move_wall) {
+				audio_stop_sound(wall_sfx);
+			}
+			wall_sfx = audio_play_sound_ext(_sound_params);
 		}
 	}
 }
