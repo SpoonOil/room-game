@@ -30,6 +30,11 @@ function collision_check(_xpos, _ypos, _direction, _move_speed){
 		speed_val = _move_speed;
 	}
 	// Yes, the player will collide with something.
+	// Is one of those somethings a wall?
+	else if place_meeting(_xpos + x_vec, _ypos + y_vec, obj_wall){
+		// This is admittedly bandaid code
+		speed_val = 0;
+	}
 	// Is one of those somethings a box?
 	else if place_meeting(_xpos + x_vec, _ypos + y_vec, obj_box){
 		// Yes, the player is set to collide with a box
