@@ -13,3 +13,10 @@ if new_bg != asset_get_index(audio_get_name(bg_music)) {
 	audio_stop_sound(bg_music);
 	bg_music = audio_play_sound(new_bg,0,true); 
 }
+
+if room != rm_main_menu && room != rm_end {
+	text[0] = "Level " + string(levels_completed+1); 
+	scr_create_text_quick(text);
+}
+
+

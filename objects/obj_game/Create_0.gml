@@ -17,5 +17,7 @@ audio_sound_loop_start(snd_cry_for_help, 2.217);
 // Play the title screen music
 bg_music = audio_play_sound(snd_cry_for_help,0,true); 
 
+levels_completed = 0;
+
 
 

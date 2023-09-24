@@ -11,4 +11,5 @@ if obj_hole.image_index == 0 && !place_meeting(old_x,old_y, obj_hole) && !level_
 	instance_create_depth(0,0,-16000,obj_transition_down);
 	alarm[0] = 30;
 	level_beaten = true;
+	obj_game.levels_completed += 1;
 }
