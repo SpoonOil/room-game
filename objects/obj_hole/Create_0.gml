@@ -5,4 +5,4 @@ depth = 99;
 
 // 0 -> opened hole
 // 1 -> closed hole
-image_index = 0;
+image_index = 1;

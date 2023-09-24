@@ -21,33 +21,31 @@ function collision_check(_xpos, _ypos, _direction, _move_speed){
 		y_vec = 16;
 	}
 	
-	// By default, we disallow the player from moving unless we see that it's possible to allow him to move
-	speed_val = 0;
+	// By default, we allow the player to move unless we see that he can't
+	speed_val = _move_speed;
 	
-	// Will the player collide with *anything*?
-	if !place_meeting(_xpos + x_vec, _ypos + y_vec, all) {
-		// No, the player will not. He is able to move.
-		speed_val = _move_speed;
-	}
-	// Yes, the player will collide with something.
-	// Is one of those somethings a wall?
-	else if place_meeting(_xpos + x_vec, _ypos + y_vec, obj_wall){
-		// This is admittedly bandaid code
+	// Will the player collide with anything that unconditionally prevents movement?
+	if place_meeting(_xpos + x_vec, _ypos + y_vec, [obj_wall, obj_obstacle, obj_spike, obj_pole]) {
+		// Yes. In this case, do not allow the player to move.
 		speed_val = 0;
-	}
-	// Is one of those somethings a box?
-	else if place_meeting(_xpos + x_vec, _ypos + y_vec, obj_box){
-		// Yes, the player is set to collide with a box
-		// Allow the player to move provided that he is set to collide with just ONE box and that box is walkable
-		_box_count = instance_place_list(_xpos + x_vec, _ypos + y_vec, obj_box, cols, true);
-		if _box_count == 1 && cols[| 0].walkable {
-			speed_val = _move_speed;	
+	} else { 
+		// No. In this case, we still need to check collisions with respect to water and boxes.
+		// Will the player collide with water?
+		if place_meeting(_xpos + x_vec, _ypos + y_vec, obj_water){
+			// Yes, the player will collide with water
+			// Do NOT allow the player to move if he is also set to collide with either 0 or 2 boxes
+			_box_count = instance_place_list(_xpos + x_vec, _ypos + y_vec, obj_box, cols, true);
+			if _box_count != 1 {
+				speed_val = 0;	
+			}
 		}
-	}
-	// No, the player will not collide with a box
-	// Will they collide with anything known to be unconditionally "safe" to collide with?
-	else if place_meeting(_xpos + x_vec, _ypos + y_vec, [obj_plate, obj_key, obj_hole]) {
-		speed_val = _move_speed;
+		else {
+			// No the player will NOT collide with water
+			// If the player collides with a box at this point, he WON'T be able to move
+			if place_meeting(_xpos + x_vec, _ypos + y_vec, obj_box) {
+				speed_val = 0;	
+			}
+		}
 	}
 	ds_list_clear(cols);
 	ds_list_destroy(cols);

@@ -2,9 +2,9 @@
 // You can write your code in this editor
 
 // Before opening the hole, make sure the player has collected all keys and that all pressure plates are in a depressed state
+old_index = image_index;
 
 image_index = 0; // We want to try to open the hole, but if a false flag comes up, we'll determine it to be closed by the end of this step code.
-
 // Are there any keys left to collect?
 if instance_number(obj_key) > 0 {
 	// Yes there are, close the hole
@@ -20,6 +20,14 @@ else {
 			image_index = 1;
 			break;	
 		}
+	}
+}
+
+if old_index != image_index {
+	if image_index == 1 {
+		audio_play_sound(snd_hole_closing,0,false);	
+	} else {
+		audio_play_sound(snd_hole_opening,0,false);
 	}
 }
 
