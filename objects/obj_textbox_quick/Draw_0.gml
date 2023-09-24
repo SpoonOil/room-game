@@ -41,7 +41,7 @@ if draw_char >= text_length[page] {
 	} else {
 		// We have scrolled through all the text the textbox has to offer
 		if !set_alarm {
-			alarm[0] = 90;
+			alarm[0] = 60;
 			set_alarm = true;
 		}
 	}

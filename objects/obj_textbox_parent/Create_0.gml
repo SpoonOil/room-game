@@ -1,5 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
+
 depth = -16000;
 
 textbox_width = 160;
@@ -21,6 +22,7 @@ draw_char = 0;
 text_speed = 1;
 
 setup = false;
+
 
 
 
