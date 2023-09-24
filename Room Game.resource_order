@@ -20,6 +20,7 @@
   "ResourceOrderSettings": [
     {"name":"spr_player_up_facing","order":3,"path":"sprites/spr_player_up_facing/spr_player_up_facing.yy",},
     {"name":"obj_camera","order":9,"path":"objects/obj_camera/obj_camera.yy",},
+    {"name":"supa_baser","order":18,"path":"rooms/supa_baser/supa_baser.yy",},
     {"name":"obj_wall_big","order":17,"path":"objects/obj_wall_big/obj_wall_big.yy",},
     {"name":"rm_level_3910","order":10,"path":"rooms/rm_level_3910/rm_level_3910.yy",},
     {"name":"rm_level_3912","order":12,"path":"rooms/rm_level_3912/rm_level_3912.yy",},
@@ -49,8 +50,10 @@
     {"name":"obj_box","order":1,"path":"objects/obj_box/obj_box.yy",},
     {"name":"rm_level_3911","order":11,"path":"rooms/rm_level_3911/rm_level_3911.yy",},
     {"name":"rm_level_4","order":4,"path":"rooms/rm_level_4/rm_level_4.yy",},
+    {"name":"supa_base17","order":17,"path":"rooms/supa_base17/supa_base17.yy",},
     {"name":"obj_player","order":5,"path":"objects/obj_player/obj_player.yy",},
     {"name":"obj_textbox_parent","order":2,"path":"objects/obj_textbox_parent/obj_textbox_parent.yy",},
+    {"name":"supa_base","order":16,"path":"rooms/supa_base/supa_base.yy",},
     {"name":"obj_key","order":16,"path":"objects/obj_key/obj_key.yy",},
     {"name":"spr_key","order":14,"path":"sprites/spr_key/spr_key.yy",},
     {"name":"obj_pole","order":7,"path":"objects/obj_pole/obj_pole.yy",},
