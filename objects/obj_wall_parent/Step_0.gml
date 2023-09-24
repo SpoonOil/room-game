@@ -73,7 +73,7 @@ if (global.move_mode = "room") {
 				// If we got here when _j = 1 , that means the adjacent space was NOT empty
 				// If we got here when _j > 1 , that means the adjacent space was NOT empty AND was occupied by something other than the player
 				var _obj_name = object_get_name(_space.object_index);
-				if ( (_obj_name == "obj_player" && _j == 1) || _obj_name == "obj_pole" || (_obj_name == "obj_obstacle" && _j > 1)) {
+				if ( (_obj_name == "obj_player") || _obj_name == "obj_pole" || (_obj_name == "obj_obstacle" && _j > 1)) {
 					// If the adjacent object is a player on the first check, an obstacle on the second or more check or a pole or an obstacle, we CANNOT move
 					can_move = false;
 					break;
@@ -98,6 +98,17 @@ if (global.move_mode = "room") {
 	
 			if can_move == false {
 				// There is no need to continue the check if even *one* wall is unable to be moved in the desired direction
+				var _sound_params =
+				{
+				    sound: snd_move_wall,
+				    priority: 100,
+				    gain: 1.0
+				};
+			
+				if audio_is_playing(snd_move_wall) {
+					audio_stop_sound(wall_sfx);
+				}
+				wall_sfx = audio_play_sound_ext(_sound_params);
 				break;
 			}
 		}

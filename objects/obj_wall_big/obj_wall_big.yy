@@ -1,7 +1,7 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_spike",
+  "name": "obj_wall_big",
   "eventList": [],
   "managed": true,
   "overriddenProperties": [],
@@ -9,7 +9,10 @@
     "name": "Objects",
     "path": "folders/Objects.yy",
   },
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "obj_wall",
+    "path": "objects/obj_wall/obj_wall.yy",
+  },
   "persistent": false,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,
@@ -26,8 +29,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_spike",
-    "path": "sprites/spr_spike/spr_spike.yy",
+    "name": "spr_wall_big",
+    "path": "sprites/spr_wall_big/spr_wall_big.yy",
   },
   "spriteMaskId": null,
   "visible": true,
