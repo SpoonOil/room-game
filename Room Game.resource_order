@@ -6,6 +6,7 @@
     {"name":"Notes","order":12,"path":"folders/Notes.yy",},
     {"name":"Objects","order":8,"path":"folders/Objects.yy",},
     {"name":"grp_text","order":15,"path":"folders/Objects/grp_text.yy",},
+    {"name":"grp_transition","order":20,"path":"folders/Objects/grp_transition.yy",},
     {"name":"Particle Systems","order":14,"path":"folders/Particle Systems.yy",},
     {"name":"Paths","order":3,"path":"folders/Paths.yy",},
     {"name":"Rooms","order":9,"path":"folders/Rooms.yy",},
@@ -16,7 +17,6 @@
     {"name":"Player Sprites","order":13,"path":"folders/Sprites/Player Sprites.yy",},
     {"name":"Tile Sets","order":1,"path":"folders/Tile Sets.yy",},
     {"name":"Timelines","order":7,"path":"folders/Timelines.yy",},
-    {"name":"grp_transition","order":20,"path":"folders/Objects/grp_transition.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"spr_player_up_facing","order":3,"path":"sprites/spr_player_up_facing/spr_player_up_facing.yy",},

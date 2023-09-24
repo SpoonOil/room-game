@@ -18,11 +18,15 @@ if keyboard_check_pressed(ord("Z")) {
 	if (global.move_mode == "room") {
 		global.move_mode = "player";
 		text[0] = "moving player";
-		scr_create_text_quick(text);
+		if room != rm_main_menu && room != rm_end {
+			scr_create_text_quick(text);
+		}
 	} else {
 		global.move_mode = "room";
 		text[0] = "moving room";
-		scr_create_text_quick(text);
+		if room != rm_main_menu && room != rm_end {
+			scr_create_text_quick(text);
+		}
 	}
 }
 
