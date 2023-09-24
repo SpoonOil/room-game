@@ -28,3 +28,5 @@ array_ind = 0;
 // This just prevents errors from occuring in the end step code
 old_x = x;
 old_y = y;
+
+level_beaten = false;

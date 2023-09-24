@@ -23,7 +23,7 @@ else {
 	}
 }
 
-if old_index != image_index {
+if old_index != image_index && instance_number(obj_transition_parent) == 0 {
 	if image_index == 1 {
 		audio_play_sound(snd_hole_closing,0,false);	
 	} else {
