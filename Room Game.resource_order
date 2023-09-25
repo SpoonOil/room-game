@@ -51,6 +51,7 @@
     {"name":"spr_textbox","order":10,"path":"sprites/spr_textbox/spr_textbox.yy",},
     {"name":"spr_ui","order":19,"path":"sprites/spr_ui/spr_ui.yy",},
     {"name":"obj_wall_parent","order":6,"path":"objects/obj_wall_parent/obj_wall_parent.yy",},
+    {"name":"rm_medium5","order":26,"path":"rooms/rm_medium5/rm_medium5.yy",},
     {"name":"rm_hard4","order":14,"path":"rooms/rm_hard4/rm_hard4.yy",},
     {"name":"spr_player_up_walking","order":7,"path":"sprites/spr_player_up_walking/spr_player_up_walking.yy",},
     {"name":"spr_water","order":7,"path":"sprites/spr_water/spr_water.yy",},
