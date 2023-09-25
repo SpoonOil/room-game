@@ -5,7 +5,7 @@
 if instance_number(obj_textbox_parent) > 0 {
 	global.move_mode = "text";	
 } else if global.move_mode = "text"{
-	global.move_mode = "room";
+	global.move_mode = "player";
 }
 
 if keyboard_check_pressed(ord("Z")) {

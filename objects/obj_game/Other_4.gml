@@ -5,8 +5,10 @@
 // If we need to play a different music track than what is currently playing, then stop the current track and play the new one
 if room == rm_main_menu {
 	new_bg = snd_cry_for_help;
+} else if room == rm_end {
+	new_bg = snd_ending;
 } else {
-	new_bg = snd_breakout;
+	new_bg = snd_breakout;	
 }
 
 if new_bg != asset_get_index(audio_get_name(bg_music)) {
