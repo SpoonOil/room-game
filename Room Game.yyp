@@ -40,7 +40,6 @@
     {"id":{"name":"spr_player_up_facing","path":"sprites/spr_player_up_facing/spr_player_up_facing.yy",},},
     {"id":{"name":"snd_hole_closing","path":"sounds/snd_hole_closing/snd_hole_closing.yy",},},
     {"id":{"name":"obj_camera","path":"objects/obj_camera/obj_camera.yy",},},
-    {"id":{"name":"rm_hard3","path":"rooms/rm_hard3/rm_hard3.yy",},},
     {"id":{"name":"obj_wall_big","path":"objects/obj_wall_big/obj_wall_big.yy",},},
     {"id":{"name":"rm_tutorial4","path":"rooms/rm_tutorial4/rm_tutorial4.yy",},},
     {"id":{"name":"obj_textbox_intro","path":"objects/obj_textbox_intro/obj_textbox_intro.yy",},},
@@ -102,6 +101,7 @@
     {"id":{"name":"snd_breakout","path":"sounds/snd_breakout/snd_breakout.yy",},},
     {"id":{"name":"spr_key","path":"sprites/spr_key/spr_key.yy",},},
     {"id":{"name":"obj_pole","path":"objects/obj_pole/obj_pole.yy",},},
+    {"id":{"name":"rm_tutorialswap","path":"rooms/rm_tutorialswap/rm_tutorialswap.yy",},},
     {"id":{"name":"obj_ui","path":"objects/obj_ui/obj_ui.yy",},},
     {"id":{"name":"obj_water_shore","path":"objects/obj_water_shore/obj_water_shore.yy",},},
     {"id":{"name":"snd_key_get","path":"sounds/snd_key_get/snd_key_get.yy",},},
@@ -155,6 +155,7 @@
     {"roomId":{"name":"rm_veryhard3","path":"rooms/rm_veryhard3/rm_veryhard3.yy",},},
     {"roomId":{"name":"supa_base17","path":"rooms/supa_base17/supa_base17.yy",},},
     {"roomId":{"name":"rm_end","path":"rooms/rm_end/rm_end.yy",},},
+    {"roomId":{"name":"rm_tutorialswap","path":"rooms/rm_tutorialswap/rm_tutorialswap.yy",},},
   ],
   "templateType": null,
   "TextureGroups": [

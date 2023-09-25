@@ -77,6 +77,7 @@
     {"name":"obj_key","order":16,"path":"objects/obj_key/obj_key.yy",},
     {"name":"spr_key","order":14,"path":"sprites/spr_key/spr_key.yy",},
     {"name":"obj_pole","order":7,"path":"objects/obj_pole/obj_pole.yy",},
+    {"name":"rm_tutorialswap","order":27,"path":"rooms/rm_tutorialswap/rm_tutorialswap.yy",},
     {"name":"obj_ui","order":21,"path":"objects/obj_ui/obj_ui.yy",},
     {"name":"obj_water_shore","order":14,"path":"objects/obj_water_shore/obj_water_shore.yy",},
     {"name":"snd_key_get","order":3,"path":"sounds/snd_key_get/snd_key_get.yy",},
