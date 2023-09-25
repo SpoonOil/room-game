@@ -1,1 +1,0 @@
-global.move_mode = "player";
