@@ -37,7 +37,7 @@
     {"name":"obj_obstacle","order":2,"path":"objects/obj_obstacle/obj_obstacle.yy",},
     {"name":"snd_hole_opening","order":4,"path":"sounds/snd_hole_opening/snd_hole_opening.yy",},
     {"name":"obj_plate","order":10,"path":"objects/obj_plate/obj_plate.yy",},
-    {"name":"rm_tutorial","order":25,"path":"rooms/rm_tutorial/rm_tutorial.yy",},
+    {"name":"rm_tutorial6","order":25,"path":"rooms/rm_tutorial6/rm_tutorial6.yy",},
     {"name":"obj_settings","order":12,"path":"objects/obj_settings/obj_settings.yy",},
     {"name":"rm_medium3","order":7,"path":"rooms/rm_medium3/rm_medium3.yy",},
     {"name":"rm_veryhard3","order":23,"path":"rooms/rm_veryhard3/rm_veryhard3.yy",},
