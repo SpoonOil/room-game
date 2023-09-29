@@ -10,6 +10,9 @@ global.move_mode = "text";
 // Sets the font to use for text display
 global.font_main = fnt_gameboy;
 
+// Sets the maximum number of undo states that the game's objects will store
+global.max_states = 10;
+
 // Set loop points for tracks in our OST where necessary
 audio_sound_loop_start(snd_cry_for_help, 2.217);
 

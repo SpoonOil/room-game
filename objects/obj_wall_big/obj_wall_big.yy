@@ -3,7 +3,7 @@
   "resourceVersion": "1.0",
   "name": "obj_wall_big",
   "eventList": [],
-  "managed": true,
+  "managed": false,
   "overriddenProperties": [],
   "parent": {
     "name": "Objects",

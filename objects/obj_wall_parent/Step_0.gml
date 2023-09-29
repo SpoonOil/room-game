@@ -114,18 +114,55 @@ if (global.move_mode = "room") {
 		}
 
 		if (can_move) {
+			// First, let's record the state histories of all the object instances we need to record
+			// If necessary, we'll also *move* the object instances in the desired direction 
+			
 			// First, move all wall objects in the desired direction...
-	
 			for (i = 0; i < instance_number(obj_wall);i++) {
 				var _wall = instance_find(obj_wall, i);
+				state = {
+					xpos : _wall.x,
+					ypos : _wall.y
+				};
+				scr_update_state(_wall,state);
+				
 				_wall.speed = 16;
 				_wall.direction = target_direction;
 			}
-	
+			
+			// Next, record the state of all boxes...
+			for(i = 0; i < instance_number(obj_box); i++) {
+				var _box = instance_find(obj_box, i);
+				state = {
+					xpos : _box.x,
+					ypos : _box.y,
+					walkable : _box.walkable
+				};
+				scr_update_state(_box, state);
+			}
+			
 			// Next, move all eligible boxes in the desired direction...
 			for(i = 0; i < array_length(boxes_to_move); i++) {
-				boxes_to_move[i].speed = 16
-				boxes_to_move[i].direction = target_direction;
+				var _box = boxes_to_move[i];
+				_box.speed = 16;
+				_box.direction = target_direction;
+			}
+			
+			// Next, record the state history of all keys
+			for (i = 0; i < instance_number(obj_key);i++) {
+				var _key = instance_find(obj_key, i);
+				scr_update_state(_key, _key.collected);
+			}
+			
+			// Next, record the state history of the player
+			// There should only be one instance of the player, this is just "safe" code
+			for (i = 0; i < instance_number(obj_player);i++) {
+				var _player = instance_find(obj_player, i);
+				state = {
+					xpos : _player.x,
+					ypos : _player.y
+				};
+				scr_update_state(_player, state);
 			}
 			
 			// Finally, play a sound indicating that we moved the walls

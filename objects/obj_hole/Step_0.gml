@@ -5,13 +5,18 @@
 old_index = image_index;
 
 image_index = 0; // We want to try to open the hole, but if a false flag comes up, we'll determine it to be closed by the end of this step code.
+
 // Are there any keys left to collect?
-if instance_number(obj_key) > 0 {
-	// Yes there are, close the hole
-	image_index = 1;
+for (i = 0; i < instance_number(obj_key); i++) {
+	if !obj_key.collected {
+		// Yes, there is a key that still needs to be collected.
+		image_index = 1;
+		break;
+	}
 }
-else {
-	// No, there aren't. Let's check that all plate objects are in a depressed state.
+
+if image_index == 0 {
+	// If we got to here, then all keys have been collected. Next, let's check whether all pressure plates are depressed or not.
 	for (i = 0; i < instance_number(obj_plate); i++) {
 		var _plate = instance_find(obj_plate, i);
 		// 0 -> unpressed plate

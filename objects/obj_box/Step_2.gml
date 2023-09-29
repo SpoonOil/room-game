@@ -6,9 +6,8 @@ speed = 0;
 if place_meeting(x,y,obj_water) {
 	// Are we currently on top of another box?
 	if !place_meeting(x,y, obj_box) {
-		image_index = 1;
+		// No we are not!
 		walkable = true;
-		depth = 1;
 	}
 }
 
